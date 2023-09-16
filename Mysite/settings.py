@@ -26,8 +26,6 @@ SECRET_KEY = 'django-insecure-osc0d9+rack9%c)qr0(uxf)!*hlnb0qjjs2yze&$ht!ls3k$z#
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,11 +49,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Mysite.urls'
-
+#import os
+#SETTING_PATH=os.path.dirname(os.path.dirname(__file__))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
